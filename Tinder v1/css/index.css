@@ -1,6 +1,133 @@
 :root {
   --main-text-color: #040c0d;
   --main-contrast-color: #f41128;
-  --main-bg-color: #eff1fc;
+  --main-bg-color: #dee0eb;
   --main-bgsed-color: #c5c1d1;
+}
+
+.wrapper {
+  width: 400px;
+  height: 650px;
+  background-color: var(--main-bg-color);
+  margin: 0 auto;
+  overflow: auto;
+  border-radius: 5px;
+}
+
+.fas {
+  font-size: 2vw;
+  color: var(--main-contrast-color);
+  cursor: pointer;
+}
+
+.far {
+  font-size: 3vw;
+  color: var(--main-contrast-color);
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  width: 95%;
+  height: 50px;
+}
+
+.profileContainer {
+  margin: 10px auto;
+  width: 90%;
+}
+
+.profileContainer__images {
+  display: flex;
+  justify-content: center;
+}
+.profileContainer__images--image {
+  width: 100%;
+  height: 360px;
+  box-shadow: 0 0 5px 0 var(--main-text-color);
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.profileContainer__info {
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 0 5px 0 var(--main-text-color);
+  display: flex;
+  justify-content: space-around;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  color: var(--main-text-color);
+}
+
+.profileContainer__info--name {
+}
+
+.profileContainer__info--age {
+  text-align: center;
+}
+.profileContainer__info--location {
+  text-align: right;
+}
+
+.chooseContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 70%;
+}
+.chooseContainer__dislike {
+  cursor: pointer;
+  width: 33%;
+  height: 90px;
+  box-shadow: 1px 0 10px #000;
+  border-radius: 50px 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.chooseContainer__like {
+  cursor: pointer;
+  width: 33%;
+  height: 90px;
+  box-shadow: 1px 0 10px #000;
+  border-radius: 50px 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.destroy {
+  height: 50px;
+  width: 150px;
+  background-color: var(--main-contrast-color);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+}
+
+.btn__showList {
+  margin-top: 2px;
+  height: 50px;
+  width: 150px;
+  background-color: var(--main-contrast-color);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+}
+.list__localstorage {
+  width: 400px;
+  height: auto;
+  position: absolute;
 }
