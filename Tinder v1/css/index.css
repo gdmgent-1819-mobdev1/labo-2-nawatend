@@ -1,17 +1,20 @@
 :root {
   --main-text-color: #040c0d;
+  --secd-text-color: #f1f2fd;
   --main-contrast-color: #f41128;
   --main-bg-color: #dee0eb;
   --main-bgsed-color: #c5c1d1;
+  --border-raduis: 10px;
 }
 
 .wrapper {
   width: 400px;
-  height: 650px;
+  height: 620px;
   background-color: var(--main-bg-color);
   margin: 0 auto;
   overflow: auto;
-  border-radius: 5px;
+  border-radius: var(--border-raduis);
+  position: relative;
 }
 
 .fas {
@@ -27,6 +30,80 @@
   margin: 0 auto;
 }
 
+/*
+MENU BURGER
+*/
+.menu__burger {
+  margin: 0;
+  z-index: 1;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background-color: var(--main-bg-color);
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, #f0969f, #f41128);
+  border-radius: 50%;
+  transition: 0.3s ease-out;
+  transform: translate(-50%, -50%);
+}
+
+.menu__burger--items {
+  display: none;
+}
+
+.menu__items {
+  width: 70%;
+  padding: 15px;
+  margin: 10px;
+  margin-left: 0;
+  border: 3px solid white;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+
+.menu__items:hover {
+  border: 3px solid #f12439d3;
+}
+.menu__items .fas {
+  color: white;
+  font-size: 3vw;
+}
+
+h1 {
+  position: relative;
+  font-size: 24px;
+  width: 200px;
+}
+.menu__expand {
+  margin: 0;
+  z-index: 1;
+  position: absolute;
+  width: 800px;
+  height: 1240px;
+  background-color: var(--main-bg-color);
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, #f0969f, #f41128);
+  border-radius: 50%;
+  transition: 0.3s ease-out;
+  transform: translate(-50%, -50%);
+}
+/*toggle menu  */
+.menu__show {
+  display: inline-block;
+  color: var(--secd-text-color);
+  width: 100px;
+  position: relative;
+  top: 55%;
+  left: 67%;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+}
+
+/* MENU END */
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -34,7 +111,9 @@
   width: 95%;
   height: 50px;
 }
-
+.headerContainer__burgermenu {
+  z-index: 2;
+}
 .profileContainer {
   margin: 10px auto;
   width: 90%;
@@ -50,6 +129,7 @@
   box-shadow: 0 0 5px 0 var(--main-text-color);
   object-fit: cover;
   margin: 0 auto;
+  border-radius: 2px 2px 0 0;
 }
 
 .profileContainer__info {
@@ -64,16 +144,10 @@
   display: flex;
   align-items: center;
   color: var(--main-text-color);
+  border-radius: 0 0 15px 15px;
 }
 
 .profileContainer__info--name {
-}
-
-.profileContainer__info--age {
-  text-align: center;
-}
-.profileContainer__info--location {
-  text-align: right;
 }
 
 .chooseContainer {
@@ -91,6 +165,7 @@
   text-align: center;
   display: flex;
   align-items: center;
+  transform: rotate(-10deg);
 }
 
 .chooseContainer__like {
@@ -102,9 +177,10 @@
   text-align: center;
   display: flex;
   align-items: center;
+  transform: rotate(10deg);
 }
 
-.destroy {
+.clear {
   height: 50px;
   width: 150px;
   background-color: var(--main-contrast-color);
