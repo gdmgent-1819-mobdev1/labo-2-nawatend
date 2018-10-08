@@ -104,6 +104,31 @@ h1 {
 }
 
 /* MENU END */
+/*---------------------------------------------visited Profile */
+.list__visitedprofiles {
+  position: absolute;
+  width: 400px;
+  height: 550px;
+  z-index: 1;
+  top: -100%;
+  left: 0;
+  background-color: var(--main-bg-color);
+  transition: 0.4s ease-in-out;
+}
+
+.list__visitedprofiles--show {
+  transition: 0.4s ease-in-out;
+  transform: translate(-0%, 688px);
+  display: flex;
+  justify-content: space-evenly;
+}
+.list__visitedprofiles_profile {
+  width: 31%;
+  height: 100px;
+  background: #000;
+  margin: 5px 10px 0px 10px;
+}
+
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -111,6 +136,8 @@ h1 {
   width: 95%;
   height: 50px;
 }
+
+/* --------------------------------------------------Menu burger */
 .headerContainer__burgermenu {
   z-index: 2;
 }

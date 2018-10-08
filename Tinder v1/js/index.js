@@ -24,7 +24,7 @@ let profileAddedCounter = 1;
 let female = document.getElementsByClassName("menu__burger--female")[0];
 let male = document.getElementsByClassName("menu__burger--male")[0];
 let both = document.getElementsByClassName("menu__burger--X ")[0];
-let url = "https://randomuser.me/api/?results=10";
+let url = "https://randomuser.me/api/?gender=female";
 
 female.addEventListener("click", function() {
   url = "https://randomuser.me/api/?gender=female";
@@ -219,7 +219,46 @@ btnMenu.addEventListener("click", function() {
   btnMenu.style.color = "white";
 });
 
-//some tests
+/* ------------------------------------------List visited Profiles Liked-Dis change--------------*/
+
+let listVisitedProfiles = document.getElementsByClassName(
+  "list__visitedprofiles"
+)[0];
+let btnTinder = document.getElementsByClassName("fas fa-fire")[1];
+
+btnTinder.addEventListener("click", function() {
+  listVisitedProfiles.classList.toggle("list__visitedprofiles--show");
+});
+
+for (let i = 0; i < localStorage.length; i++) {
+  let profileToUpdate = localStorage[i];
+  console.log(profileToUpdate);
+  // let likeOrdislike;
+  // if (
+  //   profileToUpdate.search("liked") !== -1 ||
+  //   profileToUpdate.search("dis") !== -1
+  // ) {
+  //   if (profileToUpdate.search("liked") !== -1) {
+  //     profileToUpdate = profileToUpdate.replace("liked", likeStatus);
+  //     console.log("Changed to Dis");
+  //     localStorage.setItem("profile" + profileCounter, profileToUpdate);
+  //   } else {
+  //     profileToUpdate = profileToUpdate.replace("dis", likeStatus);
+  //     localStorage.setItem("profile" + profileCounter, profileToUpdate);
+  //   }
+  // } else {
+  //   if (likeStatus === "liked") {
+  //     likeOrdislike = '","liked"]';
+  //   } else {
+  //     likeOrdislike = '","dis"]';
+  //   }
+
+  //   let index = profileToUpdate.indexOf("]") - 1;
+
+  //   profileToUpdate = profileToUpdate.slice(0, index) + likeOrdislike;
+  //   localStorage.setItem("profile" + profileCounter, profileToUpdate);
+}
+//some tests to run
 let listLocalStorage = document.getElementsByClassName("list__localstorage")[0];
 let btnShowList = document.getElementsByClassName("btn__showList")[0];
 
